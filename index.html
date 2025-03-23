@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProChat - AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Chat History</h3>
+            <span class="material-icons close-sidebar" id="close-sidebar">close</span>
+        </div>
+        <div class="sidebar-actions">
+            <button id="new-chat-btn" class="new-chat-btn">
+                <span class="material-icons">add</span> New Chat
+            </button>
+            <input type="text" id="search-chat" placeholder="Search chats...">
+        </div>
+        <div class="chat-list" id="chat-list"></div>
+    </div>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <div class="header-left">
+                <span class="material-icons menu-btn" id="menu-btn">menu</span>
+                <span class="material-icons">smart_toy</span>
+                <h2>ProChat</h2>
+            </div>
+            <div class="header-right">
+                <span class="material-icons theme-toggle" id="theme-toggle">brightness_6</span>
+                <span class="material-icons share-btn" id="share-btn">share</span>
+            </div>
+        </div>
+        <div class="chatbox" id="chatbox">
+            <div class="chat incoming">
+                <span class="material-icons">smart_toy</span>
+                <p>Hello! I'm ProChat, your AI assistant. How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <textarea id="userInput" placeholder="Type your message..." rows="1" required></textarea>
+            <button id="sendBtn" class="material-icons">send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

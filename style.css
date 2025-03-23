@@ -1,0 +1,353 @@
+/* Title: ProChat CSS Styling */
+/* Description: Styles the ProChat UI with a modern, responsive design. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    display: flex;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+body.dark .sidebar {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.sidebar-header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+body.dark .sidebar-header {
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-actions {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.new-chat-btn {
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s;
+}
+
+.new-chat-btn:hover {
+    background: #0056b3;
+}
+
+#search-chat {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+body.dark #search-chat {
+    background: #444;
+    color: #fff;
+    border-color: #555;
+}
+
+#search-chat:focus {
+    border-color: #007bff;
+}
+
+.chat-list {
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100vh - 140px);
+}
+
+.chat-item {
+    padding: 10px;
+    margin: 5px 0;
+    background: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+body.dark .chat-item {
+    background: #444;
+}
+
+.chat-item:hover {
+    background: #e0e0e0;
+}
+
+body.dark .chat-item:hover {
+    background: #555;
+}
+
+.chat-item span {
+    font-size: 14px;
+}
+
+.chatbot-container {
+    flex: 1;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body.dark .chatbot-container {
+    background: #333;
+}
+
+.chatbot-header {
+    background: linear-gradient(90deg, #007bff, #00c4ff);
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chatbox {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background: #fafafa;
+}
+
+body.dark .chatbox {
+    background: #222;
+}
+
+.chatbox::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+}
+
+.chat {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.chat p {
+    padding: 15px 20px;
+    border-radius: 12px;
+    max-width: 80%;
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.chat.incoming p {
+    background: #e9ecef;
+    color: #333;
+}
+
+body.dark .chat.incoming p {
+    background: #444;
+    color: #fff;
+}
+
+.chat.incoming span {
+    color: #007bff;
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+.chat.outgoing {
+    justify-content: flex-end;
+}
+
+.chat.outgoing p {
+    background: #007bff;
+    color: #fff;
+}
+
+.chat-actions {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.chat.outgoing:hover .chat-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.chat-actions span {
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    transition: color 0.2s;
+}
+
+.chat-actions span:hover {
+    color: #ddd;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px 20%;
+    border-top: 1px solid #eee;
+    background: #fff;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+body.dark .chat-input {
+    background: #333;
+    border-top: 1px solid #444;
+}
+
+.chat-input textarea {
+    flex: 1;
+    padding: 10px 0px 0px 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: none;
+    font-size: 16px;
+    outline: none;
+    height: 50px; /* Fixed height */
+    overflow-y: scroll; /* Enable scrolling */
+    -webkit-scrollbar-width: none; /* Hide scrollbar in Webkit browsers */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    transition: border-color 0.3s;
+}
+
+/* Explicitly hide scrollbar for Webkit browsers */
+.chat-input textarea::-webkit-scrollbar {
+    display: none;
+}
+
+body.dark .chat-input textarea {
+    background: #444;
+    color: #fff;
+    border-color: #555;
+}
+
+.chat-input textarea:focus {
+    border-color: #007bff;
+}
+
+.chat-input button {
+    margin-left: 15px;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.chat-input button:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+
+    .chatbox {
+        padding: 20px;
+    }
+
+    .chat p {
+        max-width: 85%;
+        font-size: 14px;
+    }
+
+    .chatbot-header {
+        padding: 10px 20px;
+    }
+
+    .chat-input textarea {
+        height: 50px;
+    }
+
+    .chat-input button {
+        width: 50px;
+        height: 50px;
+    }
+    .chat-input {
+        display: flex;
+        padding: 10px 10px;
+        border-top: 1px solid #eee;
+        background: #fff;
+        flex-shrink: 0;
+        align-items: center;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
