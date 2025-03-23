@@ -9,9 +9,6 @@ ProChat is a responsive, user-friendly AI chatbot designed to assist users with 
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Features
@@ -50,28 +47,7 @@ To run ProChat locally, follow these steps:
 - Edit messages by clicking the pencil icon next to your sent messages.
 - Toggle the theme using the brightness icon in the header.
 - View chat history in the sidebar (toggle via the menu icon).
-
-## Deployment
-To deploy ProChat live using GitHub Pages:
-1. **Push to GitHub** (see Section 4 below).
-2. **Enable GitHub Pages**:
-   - Go to your repository on GitHub: `https://github.com/muzamal478/prochat-ai`.
-   - Click **Settings** > **Pages**.
-   - Under "Source," select the `main` branch and `/ (root)` folder, then click **Save**.
-3. **Access the Live Site**:
-   - After a few minutes, visit: `https://muzamal478.github.io/prochat-ai/`.
-
-## Contributing
-Contributions are welcome! To contribute:
-1. Fork this repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -m "Add your feature"`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a Pull Request.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
+- 
 ## Contact
 - **Author**: Muzamal Asghar
 - **GitHub**: [muzamal478](https://github.com/muzamal478)
