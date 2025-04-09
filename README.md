@@ -1,6 +1,6 @@
 # ProChat: AI-Powered Chatbot
 
-![ProChat Screenshot](assets/screenshot.png)
+![Live Demo](https://github.com/muzamal478/prochat-ai/blob/main/assets/chatbot%20Website%20View.gif)
 
 ProChat is a responsive, user-friendly AI chatbot designed to assist users with real-time interactions. Built with modern web technologies and powered by the Google Gemini API, it offers a seamless chatting experience with features like chat history management and theme toggling.
 
