@@ -15,7 +15,7 @@ const newChatBtn = document.getElementById("new-chat-btn");
 const searchChat = document.getElementById("search-chat");
 
 // API Configuration
-const API_KEY = ""; // Replace this!
+const API_KEY = "YOUR_GEMINI_API_KEY_HERE"; // Replace this!
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
 // Global Variables
